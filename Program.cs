@@ -1,46 +1,24 @@
-﻿// Get input from user and convert to int
+﻿Random randomGenerator = new Random();
+int number = randomGenerator.Next(1, 100);
 
-Console.Write("What is your grade percent? ");
-string? numberInText = Console.ReadLine();
-int number;
-number = Convert.ToInt32(numberInText);
+int guess = 0;
 
-// Determin what letter grade is appropriate and display to terminal
-if (number >= 90)
+while (guess != number)
 {
-    string letterGrade = "A";
-    Console.Write($"Your letter grade is: {letterGrade}");
-}
-else if (number >= 80)
-{
-    string letterGrade = "B";
-    Console.Write($"Your letter grade is: {letterGrade}");
-}
-else if (number >= 70)
-{
-    string letterGrade = "C";
-    Console.Write($"Your letter grade is: {letterGrade}");
-}
-else if (number >= 60)
-{
-    string letterGrade = "D";
-    Console.Write($"Your letter grade is: {letterGrade}");
-}
-else
-{
-    string letterGrade = "F";
-    Console.Write($"Your letter grade is: {letterGrade}");
-}
+    Console.WriteLine(" ");
+    Console.Write("What is your guess? ");
+    guess = int.Parse(Console.ReadLine());
 
-// Print on a new line.
-Console.WriteLine(" ");
-
-// Display message if above 70%
-if (number >= 70)
-{
-    Console.Write("Congratulations! You passed the class!");
-}
-else
-{
-    Console.Write("Stay focused and you'll get it next time!");
+    if (guess < number)
+    {
+        Console.Write("Higher");
+    }
+    else if (guess > number)
+    {
+        Console.Write("Lower");
+    }
+    else
+    {
+        Console.Write("You guessed it!");
+    }
 }
