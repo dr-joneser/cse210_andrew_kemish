@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj",
+        "projectName": "cse210_andrew_kemish",
+        "projectPath": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj",
+        "packagesPath": "C:\\Users\\Andrew's Laptop\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andrew's Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

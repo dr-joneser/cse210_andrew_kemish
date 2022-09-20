@@ -1,0 +1,15 @@
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\bin\Debug\net6.0\cse210_andrew_kemish.exe
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\bin\Debug\net6.0\cse210_andrew_kemish.deps.json
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\bin\Debug\net6.0\cse210_andrew_kemish.runtimeconfig.json
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\bin\Debug\net6.0\cse210_andrew_kemish.dll
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\bin\Debug\net6.0\cse210_andrew_kemish.pdb
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.csproj.AssemblyReference.cache
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.AssemblyInfoInputs.cache
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.AssemblyInfo.cs
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.csproj.CoreCompileInputs.cache
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.dll
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\refint\cse210_andrew_kemish.dll
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.pdb
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\cse210_andrew_kemish.genruntimeconfig.cache
+C:\Users\Andrew's Laptop\Documents\GitHub\cse210_andrew_kemish\obj\Debug\net6.0\ref\cse210_andrew_kemish.dll
