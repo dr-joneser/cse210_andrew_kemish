@@ -1,0 +1,15 @@
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/cse210_andrew_kemish
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/cse210_andrew_kemish.deps.json
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/cse210_andrew_kemish.runtimeconfig.json
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/cse210_andrew_kemish.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/cse210_andrew_kemish.pdb
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.csproj.AssemblyReference.cache
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.AssemblyInfoInputs.cache
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.AssemblyInfo.cs
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.csproj.CoreCompileInputs.cache
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/refint/cse210_andrew_kemish.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.pdb
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.genruntimeconfig.cache
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/ref/cse210_andrew_kemish.dll
