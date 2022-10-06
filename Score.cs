@@ -33,5 +33,9 @@ public class Score {
         }
     }
 
+    // Display score to player.
+    public void DisplayScore(int score) {
+        Console.WriteLine($"Your Score is: {score}");
+    }
 
 }
