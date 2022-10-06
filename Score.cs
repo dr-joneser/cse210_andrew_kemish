@@ -1,7 +1,5 @@
 public class Score {
 
-    int score = 300;
-
     // If the user guessed correctly, then return true. 
     // Comparing old card to new card and then checking the user input.
     // Parameters: oldCardNumber is the previous card as a integer.
@@ -22,8 +20,8 @@ public class Score {
 
     // If the user guessed correctly, then add 100 points to current score.
     // If the user guessed incorrect, then subtract 75 points from current score.
-    // Parameters: correct is a bool that will be true if they guessed correctly.
-    // score is the current score for the game.
+    // Parameters: 'correct' is a bool that will be true if they guessed correctly.
+    // 'score' is the current score for the game.
     public void NewScore (bool correct, int score) {
         if (correct == true) {
             score = (score + 100);
@@ -34,7 +32,7 @@ public class Score {
     }
 
     // Display score to player.
-    public void DisplayScore(int score) {
+    public static void DisplayScore(int score) {
         Console.WriteLine($"Your Score is: {score}");
     }
 
