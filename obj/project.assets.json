@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Andrew's Laptop\\.nuget\\packages\\": {}
+    "/Users/kemish/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj",
+      "projectUniqueName": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj",
       "projectName": "cse210_andrew_kemish",
-      "projectPath": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj",
-      "packagesPath": "C:\\Users\\Andrew's Laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\obj\\",
+      "projectPath": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj",
+      "packagesPath": "/Users/kemish/.nuget/packages/",
+      "outputPath": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Andrew's Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/kemish/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

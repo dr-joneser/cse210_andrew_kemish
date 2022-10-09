@@ -22,18 +22,24 @@ public class Score {
     // If the user guessed incorrect, then subtract 75 points from current score.
     // Parameters: 'correct' is a bool that will be true if they guessed correctly.
     // 'score' is the current score for the game.
-    public void NewScore (bool correct, int score) {
+    public int NewScore (bool correct, int score) {
         if (correct == true) {
             score = (score + 100);
         }
         else {
             score = (score - 75);
         }
+        return score;
     }
 
     // Display score to player.
     public static void DisplayScore(int score) {
         Console.WriteLine($"Your Score is: {score}");
+    }
+    // Display New score to player
+    public static void NewScore(int score){
+        Console.WriteLine($"Your Score is: {score}");
+
     }
 
 }
