@@ -1,7 +1,7 @@
 public class draw{
    public static List <string> chute = new List<string>();  
     public static List <string> dude = new List<string>();
-   public static void Main(){    
+   public static void Main(int fails){    
      chute.Add(" ___");
      chute.Add("/");
      chute.Add("___");
@@ -10,7 +10,10 @@ public class draw{
      chute.Add("/");
      chute.Add(@" \ ");
      chute.Add("/");
-     dude.Add("  o");
+     if (fails == 8){
+        dude.Add("  x");}
+     else{
+        dude.Add("  o");}
      dude.Add(@" /|\");
      dude.Add(@" / \");
    }
@@ -25,10 +28,18 @@ public class draw{
     
     public void delete(bool guess, int fails){
         if (guess == false){
-            int misses = fails -1;
+            int misses = fails +6;
             chute.RemoveAt(misses);
             chute.Insert(misses,"");
         }
 
     }
+
+    public void lose(int fails){
+        if (fails == 8){
+            dude.RemoveAt(0);
+            dude.Insert(0,"x");
+        } 
+    }
+
 }
