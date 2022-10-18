@@ -26,7 +26,7 @@ public class draw{
         {Console.WriteLine(limb);}
        }
     
-    public void delete(bool guess, int fails){
+    public void delete_chute(bool guess, int fails){
         if (guess == false){
             int misses = fails +6;
             chute.RemoveAt(misses);
@@ -34,7 +34,6 @@ public class draw{
         }
 
     }
-
     public void lose(int fails){
         if (fails == 8){
             dude.RemoveAt(0);
