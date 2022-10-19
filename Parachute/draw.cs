@@ -1,6 +1,9 @@
 public class draw{
+    //Create an empty list for the parachute lines
    public static List <string> chute = new List<string>();  
+//Create an empty list for the dude's limbs
     public static List <string> dude = new List<string>();
+    // Add the lines/limbs for the parachute/dude
    public static void Main(int fails){    
      chute.Add(" ___");
      chute.Add("/");
@@ -17,6 +20,7 @@ public class draw{
      dude.Add(@" /|\");
      dude.Add(@" / \");
    }
+//    The class will print out the parachute and the dude
     public static void doodle(){
         Console.WriteLine($"{chute[0]}");
         Console.WriteLine($"{chute[1]}{chute[2]}{chute[3]}");
@@ -25,7 +29,7 @@ public class draw{
         foreach(var limb in dude)
         {Console.WriteLine(limb);}
        }
-    
+    // If the guess is false this class will delete the parachute
     public void delete_chute(bool guess, int fails){
         if (guess == false){
             int misses = fails +6;
@@ -34,6 +38,7 @@ public class draw{
         }
 
     }
+    // Once the player has hit 8 fails the head becomes an x
     public void lose(int fails){
         if (fails == 8){
             dude.RemoveAt(0);
