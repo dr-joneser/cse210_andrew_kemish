@@ -2,7 +2,7 @@ class Para_Input {
 public string? letterGuess = "";
 
     public string AskUser() {
-        Console.Write("Higher or Lower? [h/l] ");
+        Console.Write("Guess a letter [a-z]: ");
         letterGuess = Console.ReadLine();
         if (letterGuess is null) {
             letterGuess = "";
