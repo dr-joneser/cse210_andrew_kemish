@@ -1,6 +1,8 @@
 class Para_Input {
 public string? letterGuess = "";
 
+
+    // Getting the letter from the user and making sure that the input is not null.
     public string AskUser() {
         Console.Write("Guess a letter [a-z]: ");
         letterGuess = Console.ReadLine();
@@ -10,6 +12,8 @@ public string? letterGuess = "";
         return letterGuess;
     }
     
+
+    // Checking to see if the word contains that letter that the user guessed, and returs true if correct.
     public bool CompareToWord(string guess, List<string> word) {
         if (word.Contains($"{guess}")) {
             return true;
@@ -17,11 +21,16 @@ public string? letterGuess = "";
         else return false;
     }
     
-    public void ReplaceList(List<string> word, bool compare, string guess){
-        if (compare) {
-            foreach (string character in word) {
-                
 
+    // Replacing the empty list of '_' with the letter that the user guessed if they were correct. 
+    public void ReplaceList(List<string> word, string guess, List<string> emptyWord){
+        if (CompareToWord(guess, word)) {
+            foreach (string character in word) {
+                int i = 0;
+                if (character == guess) {
+                    emptyWord[i] = guess;
+                }
+                i += 1;
             }
         }
 

@@ -4,6 +4,9 @@ class Word{
     // List with the randomly chosen word split by letters
     private List<string> SplitWord = new List<string>();
 
+    // List with the underscores that will be displayed to the user
+    private List<string> UnderscoreList = new List<string>();
+
     static void Main(String [] args){
         // Add a series of words to the words list
         Word myObj = new Word();
@@ -25,4 +28,14 @@ class Word{
         myObj.SplitWord.Add(x);
         }
         }
+
+    // Create the list of _'s that is the length of the chosen word.
+    public List<string> EmptyList(List<string> chosenWord) {
+        int length = chosenWord.Count;
+        
+        for (int i = 0; i < length; i++) {
+            UnderscoreList.Add("_");
+        }
+        return UnderscoreList;
+    }
 }
