@@ -1,5 +1,5 @@
 ﻿class Program {
-    static void Main(string[] args) {
+    static void great(string[] args) {
         Input.Welcome();
         int score = 300;
         string keepPlaying = "";
