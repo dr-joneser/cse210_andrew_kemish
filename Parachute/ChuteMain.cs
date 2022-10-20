@@ -2,6 +2,10 @@ class program{
 static void Main(){
     draw sketchObj = new draw();
     draw.doodle();
+    int fails = 0;
+    while (fails < 8 && NoChute = false){
+
+    }
 }
 }
 

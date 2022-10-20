@@ -30,8 +30,8 @@ public class draw{
         {Console.WriteLine(limb);}
        }
     // If the guess is false this class will delete the parachute
-    public void delete_chute(bool guess, int fails){
-        if (guess == false){
+    public void delete_chute(bool compare, int fails){
+        if (compare == false){
             int misses = fails +6;
             chute.RemoveAt(misses);
             chute.Insert(misses,"");
