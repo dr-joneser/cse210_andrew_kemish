@@ -6,8 +6,10 @@ static void Main(){
     Console.WriteLine("A random word will be generated. You will then be asked to guess a letter.");
     Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
     Console.WriteLine("After 8 failed guesses the parachute will be erased and the game will be over.");
-    draw.AddWords(fails);
-    // WHILE LOOP
+    draw.AddLines(fails);
+    generateWord.AddWords();
+    generateWord.PickWord();
+// WHILE LOOP
     while (fails < 8 && NoChute == false){
     draw.doodle();
 
