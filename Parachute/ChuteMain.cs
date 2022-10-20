@@ -1,9 +1,13 @@
 class program{
 static void Main(){
-    draw sketchObj = new draw();
     draw.doodle();
     int fails = 0;
-    while (fails < 8 && NoChute = false){
+    bool NoChute = false;
+    Console.WriteLine("A random word will be generated. You will then be asked to guess a letter.");
+    Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
+    Console.WriteLine("After 8 failed guesses the parachute will be erased and the game will be over.");
+    while (fails < 8 && NoChute == false){
+        
 
     }
 }

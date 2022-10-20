@@ -4,7 +4,7 @@ public class draw{
 //Create an empty list for the dude's limbs
     public static List <string> dude = new List<string>();
     // Add the lines/limbs for the parachute/dude
-   public static void Main(int fails){    
+   public static void AddWords(int fails){    
      chute.Add(" ___");
      chute.Add("/");
      chute.Add("___");
