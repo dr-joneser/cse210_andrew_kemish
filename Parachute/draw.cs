@@ -4,7 +4,7 @@ public class draw{
 //Create an empty list for the dude's limbs
     public static List <string> dude = new List<string>();
     // Add the lines/limbs for the parachute/dude
-   public static void AddWords(int fails){    
+   public static void AddLines(int fails){    
      chute.Add(" ___");
      chute.Add("/");
      chute.Add("___");
@@ -39,7 +39,7 @@ public class draw{
 
     }
     // Once the player has hit 8 fails the head becomes an x
-    public void lose(int fails){
+    public void switchHead(int fails){
         if (fails == 8){
             dude.RemoveAt(0);
             dude.Insert(0,"x");
