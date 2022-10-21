@@ -1,42 +1,44 @@
-public class generateWord{
-    // List with different words
-    public List<string> words = new List<string>();
-    // List with the randomly chosen word split by letters
-    public List<string> SplitWord = new List<string>();
-    public List<string> Spaces = new List<string>();
-
-    void AddWords(){
-        // Add a series of words to the words list
+class generateWord{
+// List with different words
+    private  List<string> AddWords()
+    {
+        List<string> words= new List<string>();
+        words.Add("f e n c e");
+        words.Add("s t r a n g e");
+        words.Add("e x i s t");
+        words.Add("a l l e y");
+        words.Add("a d v e n t u r e");
+        words.Add("c l a s s e s");
+        return words;
+    }
+// LIST WITH THE CHOSEN WORD
+    private List<string> SplitWord()
+    {
+        List<string> chosenWord = new List<string>();
+        List<string> wordList = AddWords();
+    // Choose a word at random
         generateWord myObj = new generateWord();
-        myObj.words.Add("f e n c e");
-        myObj.words.Add("s t r a n g e");
-        myObj.words.Add("e x i s t");
-        myObj.words.Add("a l l e y");
-        myObj.words.Add("a d v e n t u r e");
-        myObj.words.Add("c l a s s e s");}
-    // THE CLASS WILL CHOOSE THE WORD AND SPLIT IT
-    void PickWord(string [] args){
-        generateWord myObj = new generateWord(); 
-        // Pick one of the words from the list at random
         Random rnd = new Random();
-        int randIndex = rnd.Next(myObj.words.Count);
-        string ChosenWord = myObj.words[randIndex];
-        // Split the chosen word into letters and add them to the SplitWord list
+        int randIndex = rnd.Next(wordList.Count);
+        string ChosenWord = wordList[randIndex];
+    // Split the word into individual letters and add them to a new list
         Char[] myChars = {' '};
         string[] SeparatedWord = ChosenWord.Split(myChars);
         foreach (string x in SeparatedWord)
         {
-        myObj.SplitWord.Add(x);
+        chosenWord.Add(x);
         }
+        return chosenWord;
     }
-    // Generate  a list that contains only __
+// LIST WITH ___
+    private List<string> displayWord()
+    {
+        List<string> Underscores = new List<string>();
+        List<string> chosenWord = SplitWord();
 
-    static void AddSpaces(List<string> Word){
-        generateWord myObj = new generateWord();
-        List<string> SeparatedWord = myObj.SplitWord;
-        foreach (string x in Word ){
-            myObj.Spaces.Add("_ ");
-        
+        foreach (string x in chosenWord ){
+            Underscores.Add("_ ");
         }
-    }
+        return Underscores;
+    } 
 }
