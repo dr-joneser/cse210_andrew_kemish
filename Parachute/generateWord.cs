@@ -30,10 +30,11 @@ public class generateWord{
         }
     }
     // Generate  a list that contains only __
-    static void AddSpaces(){
+
+    static void AddSpaces(List<string> Word){
         generateWord myObj = new generateWord();
         List<string> SeparatedWord = myObj.SplitWord;
-        foreach (string x in SeparatedWord ){
+        foreach (string x in Word ){
             myObj.Spaces.Add("_ ");
         
         }

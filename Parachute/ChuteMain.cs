@@ -1,7 +1,7 @@
 class program{
 static void Main(){
     int fails = 0;
-    bool NoChute = false;
+    bool Win = false;
     // PRINT STATEMENT
     Console.WriteLine("A random word will be generated. You will then be asked to guess a letter.");
     Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
@@ -10,9 +10,13 @@ static void Main(){
     generateWord.AddWords();
     generateWord.PickWord();
 // WHILE LOOP
-    while (fails < 8 && NoChute == false){
+    while (fails < 8 && Win == false){
     draw.doodle();
+    
 
+
+
+    
 
     fails = 9;
     }
@@ -20,9 +24,9 @@ static void Main(){
 }
 
 // Print statement
+// Choose word
 // LOOP***
 // draw parachute
-// Choose word
 // display spaces
 // Ask for input
 // return true or false
