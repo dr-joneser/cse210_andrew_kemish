@@ -12,7 +12,7 @@ class generateWord{
         return words;
     }
 // LIST WITH THE CHOSEN WORD
-    private List<string> SplitWord()
+    private List<string> ChooseWord()
     {
         List<string> chosenWord = new List<string>();
         List<string> wordList = AddWords();
@@ -31,14 +31,28 @@ class generateWord{
         return chosenWord;
     }
 // LIST WITH ___
-    private List<string> displayWord()
+    private List<string> Underscores()
     {
         List<string> Underscores = new List<string>();
-        List<string> chosenWord = SplitWord();
+        List<string> chosenWord = ChooseWord();
 
         foreach (string x in chosenWord ){
             Underscores.Add("_ ");
         }
         return Underscores;
-    } 
+    }
+    public List<string> DisplayGuesses(string guess){
+        List<string> chosenWord = ChooseWord();
+        List<string> emptyWord = Underscores();
+        foreach (string character in chosenWord) {
+            int i = 0;
+            if (character == guess)
+            {
+                emptyWord.RemoveAt(i);
+                emptyWord.Insert(i,guess);
+            }
+                i += 1;
+            }
+            return emptyWord;
+    }
 }

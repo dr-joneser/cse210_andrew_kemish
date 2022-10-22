@@ -30,6 +30,9 @@ public string? letterGuess = "";
                 if (character == guess) {
                     emptyWord[i] = guess;
                 }
+                else{
+                    Console.Write("_ ");
+                }
                 i += 1;
             }
         }
