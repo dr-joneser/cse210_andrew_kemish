@@ -44,15 +44,31 @@ class generateWord{
     public List<string> DisplayGuesses(string guess){
         List<string> chosenWord = ChooseWord();
         List<string> emptyWord = Underscores();
+        int i =0;
         foreach (string character in chosenWord) {
-            int i = 0;
             if (character == guess)
             {
-                emptyWord.RemoveAt(i);
                 emptyWord.Insert(i,guess);
             }
                 i += 1;
             }
             return emptyWord;
+    }
+    public void Display(string guess){
+        int i=0;
+        List<string> emptyList = new List<string>();
+        List<string> chosenWord = ChooseWord();
+         foreach (string character in chosenWord) {
+            if (character == guess)
+            {
+                Console.WriteLine(guess);
+                emptyList.Insert(i,guess);
+            }
+            else
+            {
+                Console.WriteLine("_ ");
+            emptyList.Insert(i, "_ ");
+            }
+            i += 1;}
     }
 }

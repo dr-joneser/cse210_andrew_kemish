@@ -1,19 +1,29 @@
-class program{
+class proram{
 static void Main(){
     int fails = 0;
     bool Win = false;
     draw.AddLines(fails);
-    string guess = "g";
+    string guess = "";
+
+// OBJECTS
+    generateWord myObjWord = new generateWord();
+    Para_Input myObjChute = new Para_Input();
+    
+
     // PRINT STATEMENT
     Console.WriteLine("A random word will be generated. You will then be asked to guess a letter.");
     Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
     Console.WriteLine("After 8 failed guesses the parachute will be erased and the game will be over.");
-    generateWord myObj = new generateWord();
+    myObjWord.Display(guess);
+
+// WHILE LOOP
     while (fails < 8 && Win == false){
     // DRAW THE DUDE/PARACHUTE
     draw.doodle();
     // DISPLAY THE WORD
-    myObj.DisplayGuesses(guess);
+
+    myObjWord.DisplayGuesses(guess);
+    myObjWord.Display(guess);
 
 
     fails = 9;
