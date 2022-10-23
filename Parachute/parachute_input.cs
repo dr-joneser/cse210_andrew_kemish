@@ -37,7 +37,6 @@ public string? letterGuess = "";
                 i += 1;
             }
         }
-
     }
 
     
