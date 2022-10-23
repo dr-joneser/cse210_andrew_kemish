@@ -1,9 +1,9 @@
-class generateWordd{
+class generateWord{
 // List with different words
-    public List<string> WordList = new List<string>();
+    public static List<string> WordList = new List<string>();
 // EMPTY LIST WHERE THE WORD GOES
-    private List<string>SelectedWord = new List<string>();
-    public List <string> Underscores = new List<string>();
+    private static List<string>SelectedWord = new List<string>();
+    public static List <string> Underscores = new List<string>();
 // ADD WORDS TO THE WORD LIST
         void AddWords(){
         WordList.Add("f e n c e");
@@ -13,16 +13,7 @@ class generateWordd{
         WordList.Add("a d v e n t u r e");
         WordList.Add("c l a s s e s");
     }
-
-
-    // void includeWords(){
-    // WordList.Add("f e n c e");
-    // WordList.Add("s t r a n g e");
-    // WordList.Add("e x i s t");
-    // WordList.Add("a l l e y");
-    // WordList.Add("a d v e n t u r e");
-    // WordList.Add("c l a s s e s");}
-    public generateWordd()
+    public generateWord()
     {
         AccesibleWord = SelectedWord;
     }
@@ -58,17 +49,26 @@ class generateWordd{
         }
     }
     
-    public void DisplayGuesses(string guess){
+    public static void UpdateGuesses(string guess){
         int i=0;
-        List<string> emptyList = Underscores;
-        List<string> chosenWord = SelectedWord;
-         foreach (string character in chosenWord) {
+         foreach (string character in SelectedWord)
+         {
             if (character == guess)
             {
-                Console.WriteLine(guess);
-                emptyList.RemoveAt(i);
-                emptyList.Insert(i,guess);
+                Underscores.RemoveAt(i);
+                Underscores.Insert(i,guess);
             }
-            i += 1;}
+            i += 1;
+         }
     }
+    public void DisplayGuesses(string guess)
+    {
+        UpdateGuesses(guess);
+        foreach(string character in Underscores)
+        {
+            Console.WriteLine($"{character}");
+        }
+        
+    }
+
 }

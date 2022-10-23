@@ -1,14 +1,17 @@
 class proram{
 static void Main(){
+    // SET THE CONDITIONS FOR THE LOOP TO RUN
     int fails = 0;
     bool Win = false;
-    draw.AddLines(fails);
     string guess = "";
-
 // OBJECTS
-    generateWordd myObjWord = new generateWordd();
+    generateWord myObjWord = new generateWord();
     Para_Input myObjInput = new Para_Input();
     draw myObjDraw = new draw();
+    List<string> word = myObjWord.AccesibleWord;
+    // DRAW THE DUDE/PARACHUTE
+    draw.AddLines(fails);
+
 
     // PRINT STATEMENT
     Console.WriteLine("A random word will be generated. You will then be asked to guess a letter.");
@@ -22,10 +25,19 @@ static void Main(){
     // DRAW THE DUDE/PARACHUTE
     draw.doodle();
     // ASK FOR INPUT
-    myObjInput.AskUser();
+    guess = myObjInput.AskUser();
     // DISPLAY GUESS
     myObjWord.DisplayGuesses(guess);
-    // myObjInput.CompareToWord(guess, word);
+    // CHECK TO SEE IF LETTER IS IN WORD
+    bool Comparison= myObjInput.CompareToWord(guess, word);
+    // ADD +1 FAIL FOR EVERY WRONG GUESS
+    if (Comparison== false)
+    {
+        fails +=1;
+    }
+    // DELETE A LINE FOR EVERY WRONG GUESS
+    myObjDraw.deleteChute(Comparison, fails);
+
     fails = 9; 
     }
 }
