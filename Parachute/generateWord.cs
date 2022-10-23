@@ -3,9 +3,6 @@ class generateWord{
     public static List<string> WordList = new List<string>();
 // EMPTY LIST WHERE THE WORD GOES
     private static List<string>SelectedWord = new List<string>();
-    public static List<string> DisplayList = new List<string>();
-    public static List<string> GuessList = new List<string>();
-
     public List<string> Underscorez(List<string> ChosenWord)
     {
         List<string> UnderscoreList = new List<string>();
@@ -14,6 +11,14 @@ class generateWord{
             UnderscoreList.Add("_ ");
         }
         return UnderscoreList;
+    }
+    public void Spaces(List<string> ChosenWord)
+    {
+
+        foreach (string character in ChosenWord)
+        {
+            Console.Write("_ ");
+        }
     }
 
 
@@ -52,32 +57,19 @@ class generateWord{
             // SelectedWord = value; 
             }
     }
-    public void AddGuesses(string guess)
-    {
-        GuessList.Add(guess);
-    }
 
     public void DisplayGuesses(string guess,List<string> UnderscoreList)
-    { int i =0;
-        foreach (string character in GuessList)
-        {foreach(string characte in SelectedWord)
-        {
-            if (characte == guess)
-            {
-                UnderscoreList.Insert(i, GuessList[i]);
-            }
-        }
-            if (character == guess)
-            {
-                UnderscoreList.Insert(i,guess);
-            }
-        i+=1;
-        }
-        foreach( string characte in UnderscoreList)
-        {
-            Console.Write($"{characte}");
-        }
+    {
+        for (int j = 0; j < AccesibleWord.Count; j++)
+{
+                    if (guess == SelectedWord[j])
+                        UnderscoreList[j] = guess;
+                }
+                Console.WriteLine(guess);
     }
+
+
+    
 // Generate a list with ____ according to the chosen word
 // Pull the users guesses
 // Create a loop that will compare the list with the guess and update the underscore list
