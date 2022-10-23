@@ -18,16 +18,17 @@ static void Main(){
     Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
     Console.WriteLine("After 8 failed guesses the parachute will be erased and the game will be over.");
     // DISPLAY WORD AS ___
-    myObjWord.DisplayGuesses(guess);
 
 // WHILE LOOP
     while (fails < 8 && Win == false){
     // DRAW THE DUDE/PARACHUTE
     draw.doodle();
+    // DISPLAY GUESS
+    Console.Write("The word is: ");
+    myObjWord.DisplayGuesses(guess);
     // ASK FOR INPUT
     guess = myObjInput.AskUser();
-    // DISPLAY GUESS
-    myObjWord.DisplayGuesses(guess);
+
     // CHECK TO SEE IF LETTER IS IN WORD
     bool Comparison= myObjInput.CompareToWord(guess, word);
     // ADD +1 FAIL FOR EVERY WRONG GUESS
@@ -37,8 +38,6 @@ static void Main(){
     }
     // DELETE A LINE FOR EVERY WRONG GUESS
     myObjDraw.deleteChute(Comparison, fails);
-
-    fails = 9; 
     }
 }
 }

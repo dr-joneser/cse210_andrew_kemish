@@ -22,7 +22,7 @@ public class draw{
    }
 //    The class will print out the parachute and the dude
     public static void doodle(){
-        Console.WriteLine($"{chute[0]}");
+        Console.WriteLine($"\n{chute[0]}");
         Console.WriteLine($"{chute[1]}{chute[2]}{chute[3]}");
         Console.WriteLine($"{chute[4]}{chute[5]}");
         Console.WriteLine($"{chute[6]}{chute[7]}");

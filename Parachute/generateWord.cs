@@ -49,7 +49,8 @@ class generateWord{
         }
     }
     
-    public static void UpdateGuesses(string guess){
+    public void UpdateGuesses(string guess){
+        AddUnderscore();
         int i=0;
          foreach (string character in SelectedWord)
          {
@@ -66,7 +67,7 @@ class generateWord{
         UpdateGuesses(guess);
         foreach(string character in Underscores)
         {
-            Console.WriteLine($"{character}");
+            Console.Write($"{character}");
         }
         
     }

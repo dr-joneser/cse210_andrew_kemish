@@ -4,7 +4,8 @@ public string? letterGuess = "";
 
     // Getting the letter from the user and making sure that the input is not null.
     public string AskUser() {
-        Console.Write("Guess a letter [a-z]: ");
+        Console.WriteLine("");
+        Console.Write("Guess a letter [a-z]:");
         letterGuess = Console.ReadLine();
         if (letterGuess is null) {
             letterGuess = "";
