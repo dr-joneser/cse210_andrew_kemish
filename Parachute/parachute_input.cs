@@ -13,7 +13,7 @@ public string? letterGuess = "";
     }
     
 
-    // Checking to see if the word contains that letter that the user guessed, and returs true if correct.
+    // Checking to see if the word contains that letter that the user guessed, and returns true if correct.
     public bool CompareToWord(string guess, List<string> word) {
         if (word.Contains($"{guess}")) {
             return true;
