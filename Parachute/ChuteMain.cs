@@ -9,6 +9,7 @@ static void Main(){
     Para_Input myObjInput = new Para_Input();
     draw myObjDraw = new draw();
     List<string> word = myObjWord.AccesibleWord;
+    List<string> emptyWord = myObjWord.Spaces();
     // DRAW THE DUDE/PARACHUTE
     draw.AddLines(fails);
 
@@ -25,7 +26,7 @@ static void Main(){
     draw.doodle();
     // DISPLAY GUESS
     Console.Write("The word is: ");
-    myObjWord.DisplayGuesses(guess);
+    myObjInput.ReplaceList(word, guess, emptyWord);
     // ASK FOR INPUT
     guess = myObjInput.AskUser();
 

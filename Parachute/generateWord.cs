@@ -4,6 +4,7 @@ class generateWord{
 // EMPTY LIST WHERE THE WORD GOES
     private static List<string>SelectedWord = new List<string>();
     public static List <string> Underscores = new List<string>();
+
 // ADD WORDS TO THE WORD LIST
         void AddWords(){
         WordList.Add("f e n c e");
@@ -41,6 +42,15 @@ class generateWord{
     }
 
 // LIST WITH ___
+    public  List<string> Spaces(){
+        List<string> Spaces = new List<string>();
+
+        foreach (string character in AccesibleWord)
+        {
+            Spaces.Add("_ ");
+        }
+        return Spaces;
+    }
     void AddUnderscore()
     {
         foreach (string x in AccesibleWord)
@@ -64,11 +74,9 @@ class generateWord{
     }
     public void DisplayGuesses(string guess)
     {
-        UpdateGuesses(guess);
-        foreach(string character in Underscores)
-        {
-            Console.Write($"{character}");
-        }
+        List<string> Space = Spaces(); 
+        foreach (string character in Space)
+        Console.Write("_ ");
         
     }
 
