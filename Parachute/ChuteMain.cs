@@ -8,6 +8,7 @@ static void Main(){
     generateWord myObjWord = new generateWord();
     Para_Input myObjInput = new Para_Input();
     draw myObjDraw = new draw();
+    win myObjWin = new win();
     
 // LISTS
     List<string> word = myObjWord.AccesibleWord;
@@ -19,7 +20,7 @@ static void Main(){
     Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
     Console.WriteLine("After 8 failed guesses the parachute will be erased and the game will be over.");
     myObjWord.Spaces(word);
-
+    Console.WriteLine(word);
 
 // WHILE LOOP*****
     while (fails < 8 && Win == false){
@@ -41,16 +42,15 @@ static void Main(){
     }
     // DELETE A LINE FOR EVERY WRONG GUESS
     myObjDraw.deleteChute(Comparison, fails);
+    Win = myObjWin.victory(emptyWord);
     }
-}
+    // END OF LOOP*** 
+    if (Win == true){
+    Console.WriteLine("COngrats you won!");}
+    else{
+        Console.WriteLine("Sorry you lost :( ");
+    }
+
 }
 
-// Print statement
-// Choose word
-// LOOP***
-// draw parachute
-// display spaces
-// Ask for input
-// return true or false
-// delete line or replace letter
-// LOOP***
+}

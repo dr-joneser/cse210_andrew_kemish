@@ -26,19 +26,19 @@ public string? letterGuess = "";
     // Replacing the empty list of '_' with the letter that the user guessed if they were correct. 
     public void ReplaceList(List<string> word, string guess, List<string> emptyWord){
         if (CompareToWord(guess, word)) {
+            int i = 0;
             foreach (string character in word) {
-                int i = 0;
                 if (character == guess) {
-                    emptyWord[i] = guess;
-                }
-                else{
-                    Console.Write("_ ");
+                    emptyWord.RemoveAt(i);
+                    emptyWord.Insert(i, guess);
+                
                 }
                 i += 1;
+                }
             }
+        foreach( string character in emptyWord)
+        {
+        Console.Write(character);
+        }
         }
     }
-
-    
-}
-

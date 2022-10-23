@@ -54,7 +54,6 @@ class generateWord{
         {
                 SelectedWord.Add(x);
         }
-            // SelectedWord = value; 
             }
     }
 
