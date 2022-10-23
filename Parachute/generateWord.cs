@@ -3,7 +3,15 @@ class generateWord{
     public static List<string> WordList = new List<string>();
 // EMPTY LIST WHERE THE WORD GOES
     private static List<string>SelectedWord = new List<string>();
-    public static List <string> Underscores = new List<string>();
+    public static List <string> UnderscoreList = new List<string>();
+    public static List <string> GuessList = new List<string>();
+
+    public static List<string> DisplayList = new List<string>();
+
+   static void AddGuesses(string guess)
+    {
+        GuessList.Add(guess);
+    }
 
 // ADD WORDS TO THE WORD LIST
         void AddWords(){
@@ -55,7 +63,7 @@ class generateWord{
     {
         foreach (string x in AccesibleWord)
         {
-            Underscores.Add("_ ");
+            UnderscoreList.Add("_ ");
         }
     }
     
@@ -66,18 +74,29 @@ class generateWord{
          {
             if (character == guess)
             {
-                Underscores.RemoveAt(i);
-                Underscores.Insert(i,guess);
+                UnderscoreList.RemoveAt(i);
+                UnderscoreList.Insert(i,guess);
             }
             i += 1;
          }
     }
     public void DisplayGuesses(string guess)
     {
-        List<string> Space = Spaces(); 
-        foreach (string character in Space)
-        Console.Write("_ ");
-        
+        AddUnderscore();
+
+        AddGuesses(guess);
+        int i =0;
+        foreach(string character in UnderscoreList)
+        {
+            if (character == GuessList[i])
+            {
+                UnderscoreList.Insert(i, GuessList[i]);
+            }
+            i +=1;
+        }
     }
+// Generate a list with ____ according to the chosen word
+// Pull the users guesses into a list
+// If a string from the 'guess' list is in 'Underscores' list update __ to (a-z)
 
 }

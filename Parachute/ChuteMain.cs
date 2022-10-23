@@ -26,7 +26,8 @@ static void Main(){
     draw.doodle();
     // DISPLAY GUESS
     Console.Write("The word is: ");
-    myObjInput.ReplaceList(word, guess, emptyWord);
+    myObjWord.DisplayGuesses(guess);
+    // myObjInput.ReplaceList(word, guess, emptyWord);
     // ASK FOR INPUT
     guess = myObjInput.AskUser();
 
