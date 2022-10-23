@@ -1,73 +1,73 @@
-class generateWord{
+class generateWordd{
 // List with different words
-    private  List<string> AddWords()
-    {
-        List<string> words= new List<string>();
-        words.Add("f e n c e");
-        words.Add("s t r a n g e");
-        words.Add("e x i s t");
-        words.Add("a l l e y");
-        words.Add("a d v e n t u r e");
-        words.Add("c l a s s e s");
-        return words;
+    public List<string> WordList = new List<string>();
+// EMPTY LIST WHERE THE WORD GOES
+    private List<string>SelectedWord = new List<string>();
+    public List <string> Underscores = new List<string>();
+// ADD WORDS TO THE WORD LIST
+        void AddWords(){
+        WordList.Add("f e n c e");
+        WordList.Add("s t r a n g e");
+        WordList.Add("e x i s t");
+        WordList.Add("a l l e y");
+        WordList.Add("a d v e n t u r e");
+        WordList.Add("c l a s s e s");
     }
-// LIST WITH THE CHOSEN WORD
-    private List<string> ChooseWord()
-    {
-        List<string> chosenWord = new List<string>();
-        List<string> wordList = AddWords();
-    // Choose a word at random
-        generateWord myObj = new generateWord();
-        Random rnd = new Random();
-        int randIndex = rnd.Next(wordList.Count);
-        string ChosenWord = wordList[randIndex];
-    // Split the word into individual letters and add them to a new list
-        Char[] myChars = {' '};
-        string[] SeparatedWord = ChosenWord.Split(myChars);
-        foreach (string x in SeparatedWord)
-        {
-        chosenWord.Add(x);
-        }
-        return chosenWord;
-    }
-// LIST WITH ___
-    private List<string> Underscores()
-    {
-        List<string> Underscores = new List<string>();
-        List<string> chosenWord = ChooseWord();
 
-        foreach (string x in chosenWord ){
+
+    // void includeWords(){
+    // WordList.Add("f e n c e");
+    // WordList.Add("s t r a n g e");
+    // WordList.Add("e x i s t");
+    // WordList.Add("a l l e y");
+    // WordList.Add("a d v e n t u r e");
+    // WordList.Add("c l a s s e s");}
+    public generateWordd()
+    {
+        AccesibleWord = SelectedWord;
+    }
+// GETTER AND SETTER
+    public List<string> AccesibleWord
+    {
+        get { return SelectedWord; }
+        set { 
+            AddWords();
+            List<string> Words = WordList;
+        // Choose a word at random
+            Random rnd = new Random();
+            int randIndex = rnd.Next(Words.Count);
+            string ChosenWord = Words[randIndex];
+
+        // Split the word into individual letters and add them to a new list
+            Char[] myChars = {' '};
+            string[] SeparatedWord = ChosenWord.Split(myChars);
+            foreach (string x in SeparatedWord)
+        {
+                SelectedWord.Add(x);
+        }
+            // SelectedWord = value; 
+            }
+    }
+
+// LIST WITH ___
+    void AddUnderscore()
+    {
+        foreach (string x in AccesibleWord)
+        {
             Underscores.Add("_ ");
         }
-        return Underscores;
     }
-    public List<string> DisplayGuesses(string guess){
-        List<string> chosenWord = ChooseWord();
-        List<string> emptyWord = Underscores();
-        int i =0;
-        foreach (string character in chosenWord) {
-            if (character == guess)
-            {
-                emptyWord.Insert(i,guess);
-            }
-                i += 1;
-            }
-            return emptyWord;
-    }
-    public void Display(string guess){
+    
+    public void DisplayGuesses(string guess){
         int i=0;
-        List<string> emptyList = new List<string>();
-        List<string> chosenWord = ChooseWord();
+        List<string> emptyList = Underscores;
+        List<string> chosenWord = SelectedWord;
          foreach (string character in chosenWord) {
             if (character == guess)
             {
                 Console.WriteLine(guess);
+                emptyList.RemoveAt(i);
                 emptyList.Insert(i,guess);
-            }
-            else
-            {
-                Console.WriteLine("_ ");
-            emptyList.Insert(i, "_ ");
             }
             i += 1;}
     }

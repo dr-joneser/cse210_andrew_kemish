@@ -6,7 +6,7 @@ static void Main(){
     string guess = "";
 
 // OBJECTS
-    generateWord myObjWord = new generateWord();
+    generateWordd myObjWord = new generateWordd();
     Para_Input myObjInput = new Para_Input();
     draw myObjDraw = new draw();
 
@@ -15,7 +15,7 @@ static void Main(){
     Console.WriteLine("If the letter is in the word it will show up on the screen. If not a line from the parachute will be deleted.");
     Console.WriteLine("After 8 failed guesses the parachute will be erased and the game will be over.");
     // DISPLAY WORD AS ___
-    myObjWord.Display(guess);
+    myObjWord.DisplayGuesses(guess);
 
 // WHILE LOOP
     while (fails < 8 && Win == false){
@@ -24,9 +24,9 @@ static void Main(){
     // ASK FOR INPUT
     myObjInput.AskUser();
     // DISPLAY GUESS
-    myObjWord.Display(guess);
-
-    fails = 9;
+    myObjWord.DisplayGuesses(guess);
+    // myObjInput.CompareToWord(guess, word);
+    fails = 9; 
     }
 }
 }
