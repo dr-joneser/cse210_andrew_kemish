@@ -33,8 +33,8 @@ public class draw{
     public void deleteChute(bool compare, int fails){
         if (compare == false){
             int misses = 9 - fails;
-            chute.RemoveAt(misses);
-            chute.Insert(misses,"");
+            chute.RemoveAt(fails - 1);
+            chute.Insert(fails -1,"");
         }
 
     }

@@ -3,15 +3,19 @@ class generateWord{
     public static List<string> WordList = new List<string>();
 // EMPTY LIST WHERE THE WORD GOES
     private static List<string>SelectedWord = new List<string>();
-    public static List <string> UnderscoreList = new List<string>();
-    public static List <string> GuessList = new List<string>();
-
     public static List<string> DisplayList = new List<string>();
+    public static List<string> GuessList = new List<string>();
 
-   static void AddGuesses(string guess)
+    public List<string> Underscorez(List<string> ChosenWord)
     {
-        GuessList.Add(guess);
+        List<string> UnderscoreList = new List<string>();
+        foreach(string character in ChosenWord)
+        {
+            UnderscoreList.Add("_ ");
+        }
+        return UnderscoreList;
     }
+
 
 // ADD WORDS TO THE WORD LIST
         void AddWords(){
@@ -48,55 +52,36 @@ class generateWord{
             // SelectedWord = value; 
             }
     }
-
-// LIST WITH ___
-    public  List<string> Spaces(){
-        List<string> Spaces = new List<string>();
-
-        foreach (string character in AccesibleWord)
-        {
-            Spaces.Add("_ ");
-        }
-        return Spaces;
-    }
-    void AddUnderscore()
+    public void AddGuesses(string guess)
     {
-        foreach (string x in AccesibleWord)
-        {
-            UnderscoreList.Add("_ ");
-        }
+        GuessList.Add(guess);
     }
-    
-    public void UpdateGuesses(string guess){
-        AddUnderscore();
-        int i=0;
-         foreach (string character in SelectedWord)
-         {
-            if (character == guess)
-            {
-                UnderscoreList.RemoveAt(i);
-                UnderscoreList.Insert(i,guess);
-            }
-            i += 1;
-         }
-    }
-    public void DisplayGuesses(string guess)
-    {
-        AddUnderscore();
 
-        AddGuesses(guess);
-        int i =0;
-        foreach(string character in UnderscoreList)
+    public void DisplayGuesses(string guess,List<string> UnderscoreList)
+    { int i =0;
+        foreach (string character in GuessList)
+        {foreach(string characte in SelectedWord)
         {
-            if (character == GuessList[i])
+            if (characte == guess)
             {
                 UnderscoreList.Insert(i, GuessList[i]);
             }
-            i +=1;
+        }
+            if (character == guess)
+            {
+                UnderscoreList.Insert(i,guess);
+            }
+        i+=1;
+        }
+        foreach( string characte in UnderscoreList)
+        {
+            Console.Write($"{characte}");
         }
     }
 // Generate a list with ____ according to the chosen word
-// Pull the users guesses into a list
+// Pull the users guesses
+// Create a loop that will compare the list with the guess and update the underscore list
+// 
 // If a string from the 'guess' list is in 'Underscores' list update __ to (a-z)
 
 }
