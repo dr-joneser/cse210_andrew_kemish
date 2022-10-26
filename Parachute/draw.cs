@@ -22,7 +22,7 @@ public class draw{
    }
 //    The class will print out the parachute and the dude
     public static void doodle(){
-        Console.WriteLine($"{chute[0]}");
+        Console.WriteLine($"\n{chute[0]}");
         Console.WriteLine($"{chute[1]}{chute[2]}{chute[3]}");
         Console.WriteLine($"{chute[4]}{chute[5]}");
         Console.WriteLine($"{chute[6]}{chute[7]}");
@@ -30,11 +30,11 @@ public class draw{
         {Console.WriteLine(limb);}
        }
     // If the guess is false this class will delete the parachute
-    public void delete_chute(bool compare, int fails){
+    public void deleteChute(bool compare, int fails){
         if (compare == false){
-            int misses = fails +6;
-            chute.RemoveAt(misses);
-            chute.Insert(misses,"");
+            int misses = 9 - fails;
+            chute.RemoveAt(fails - 1);
+            chute.Insert(fails -1,"");
         }
 
     }
