@@ -31,7 +31,6 @@ public string? letterGuess = "";
                 if (character == guess) {
                     emptyWord.RemoveAt(i);
                     emptyWord.Insert(i, guess);
-                
                 }
                 i += 1;
                 }
