@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj": {}
+    "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj": {}
   },
   "projects": {
-    "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj": {
+    "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj",
+        "projectUniqueName": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj",
         "projectName": "cse210_andrew_kemish",
-        "projectPath": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj",
-        "packagesPath": "/Users/kemish/.nuget/packages/",
-        "outputPath": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/",
+        "projectPath": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\cse210_andrew_kemish.csproj",
+        "packagesPath": "C:\\Users\\Andrew's Laptop\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andrew's Laptop\\Documents\\GitHub\\cse210_andrew_kemish\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/kemish/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Andrew's Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Raylib-cs": {
+              "target": "Package",
+              "version": "[4.0.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
