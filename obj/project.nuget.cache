@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3/UFEJceJ7IQN6AfNNKMY176ZAZjh/amcLeWNXg75byOt9lAKIfvl+lEIyKctDASMq+kTorYbJ8u28/qkIZsgw==",
+  "dgSpecHash": "yjo3xbljvKaDLSCIA306Pbd/fM13xyQpR2iENwQKy/i6LPqhJB11fFAtWhz1gKDtHCFCZvxzHW2fOiz7Aj+g5Q==",
   "success": true,
   "projectFilePath": "/Users/kemish/Documents/GIT/cse210_andrew_kemish/cse210_andrew_kemish.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/kemish/.nuget/packages/raylib-cs/4.0.0.1/raylib-cs.4.0.0.1.nupkg.sha512",
+    "/Users/kemish/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
