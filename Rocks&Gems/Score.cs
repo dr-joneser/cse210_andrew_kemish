@@ -4,8 +4,8 @@ class PlayerScore: Position{
     public int score = new int();
 
     //SCORE POSITION
-    xPos = 12;
-    yPos = 12;
+    int xPos = 12;
+   int yPos = 12;
 
     // DISPLAY SCORE
     public static void DrawScore(int score) {

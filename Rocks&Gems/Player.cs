@@ -1,4 +1,7 @@
 class Player: MovementHorizontal{
-    var PlayerRectangle = new Rectangle(ScreenWidth - (RectangleSize * 2), ScreenHeight - (RectangleSize * 2), RectangleSize, RectangleSize);
+    public static void DrawPlayer(){
+    var PlayerRectangle = new Rectangle(430, 400, 20, 20);
+    }
+    
 
 }
