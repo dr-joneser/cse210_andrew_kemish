@@ -99,13 +99,13 @@ namespace HelloWorld
                 switch (whichType) {
                     case 0:
                         Console.WriteLine("Creating a square");
+                        // Set the variable equal to the method takes in arguments
                         var square = new GameSquare(Color.YELLOW, 50);
                         square.Position = position;
                         square.Velocity = new Vector2(randomX, randomY);
                         // To the list add a variable
                         Objects.Add(square);                        
                         break;
-                        bootyholebootyholeHEHE
                     case 1:
                         Console.WriteLine("Creating a circle");
                         // declare variable by calling class and adding arguments
