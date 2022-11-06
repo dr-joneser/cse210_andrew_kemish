@@ -24,6 +24,7 @@ class Main {
                 Raylib.DrawText($"Score: {score}",12,12,15,Color.BLACK);
 
                 var RockOrGem = Random.Next(2);
+                
 
                 int PositionX = Random.Next(0, ScreenWidth);
                 var position = new Vector2 (PositionX , 0);
