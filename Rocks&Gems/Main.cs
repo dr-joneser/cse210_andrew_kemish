@@ -35,7 +35,7 @@ class Main {
                     Console.WriteLine("Creating a Rock");
                         var Rock = new GameRock();
                         Rock.Position = position;
-                        Rock.Velocity = new Vector2(0,-2);
+                        Rock.Velocity = new Vector2(0,18);
                         Rocks.Add(Rock);
                         break;
                     case 1:

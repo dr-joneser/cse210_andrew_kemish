@@ -6,7 +6,7 @@ class GameRock: MovementVertical{
     override public void Draw() {
         Random rnd = new Random();
         int RandInt = rnd.Next(20,780);
-        Raylib.DrawText("o", RandInt, (int)Position.Y, 15, Color.BLACK);
+        Raylib.DrawText("o", (int)Position.X, (int)Position.Y, 15, Color.BLACK);
     }
 }
 
@@ -16,6 +16,6 @@ class GameGem: MovementVertical{
     override public void Draw() {
         Random rnd = new Random();
         int RandInt = rnd.Next(20,780);
-        Raylib.DrawText("*", RandInt , (int)Position.Y, 15, Color.RED);
+        Raylib.DrawText("*", (int)Position.X , (int)Position.Y, 15, Color.RED);
     }
 }

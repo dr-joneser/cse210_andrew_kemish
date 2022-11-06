@@ -27,12 +27,9 @@ abstract class MovementHorizontal{
     }
 }
 
-Random Rnd = new Random();
-public int RandInt = Rnd.Next(20,780);
 abstract class MovementVertical{
-    
-    public Vector2 Position = new Vector2(RandInt, 0);
-    public Vector2 Velocity = new Vector2(0, 18);
+    public Vector2 Position {get; set; } = new Vector2(0, 0);
+    public Vector2 Velocity {get; set; } = new Vector2(0, 0);
     // Y-VALUE POSITION OF ROCKS AND GEMS ARE INCREASING AT A CONSTANT RATE (GRAVITY)
     virtual public void Draw() {
         // Base game objects do not have anything to draw
