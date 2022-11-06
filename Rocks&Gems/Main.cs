@@ -35,8 +35,13 @@ class Main {
                 var position = new Vector2 (PositionX , 0);
 
                 switch (RockGem){
+                    // If case is 0 it'll create a Rock
                     case 0;
-                    var square 
+                    var Rock = new GameRock(color.BLACK, 20);
+                    // Rock position
+                    Rock.xPosition = position;
+                    Rock.Velocity = new Vector2(0,-2);
+                    Objects.Add(Rock);
                 }
 
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
