@@ -2,20 +2,20 @@ using Raylib_cs;
 using System.Numerics;
 
 class GameRock: MovementVertical{
-    public int Size {get; set; }
-    Random rnd = new Random();
-    int RandInt = rnd.Next(20,780);
+    // DRAW THE ROCKS
     override public void Draw() {
-        Raylib.DrawText("o", 0 , RandInt, 15, color.RED);
+        Random rnd = new Random();
+        int RandInt = rnd.Next(20,780);
+        Raylib.DrawText("o", RandInt, (int)Position.Y, 15, Color.BLACK);
     }
 }
 
 
 class GameGem: MovementVertical{
-    public int Size {get; set; }
-    Random rnd = new Random();
-    int RandInt = rnd.Next(20,780);
+    // DRAW THE GEMS
     override public void Draw() {
-        Raylib.DrawText("*", 0 , RandInt, 15, color.RED);
+        Random rnd = new Random();
+        int RandInt = rnd.Next(20,780);
+        Raylib.DrawText("*", RandInt , (int)Position.Y, 15, Color.RED);
     }
 }
