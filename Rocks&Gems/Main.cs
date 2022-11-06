@@ -16,6 +16,7 @@ class Main {
             Raylib.InitWindow(ScreenWidth, ScreenHeight, "Greed");
             Raylib.SetTargetFPS(10);
             int score = 0;
+            var PlayerPosition = new Vector2 (400,450);
 
             while (!Raylib.WindowShouldClose())
             {
@@ -32,16 +33,15 @@ class Main {
                 switch (RockOrGem){
                     // If case is 0 it'll create a Rock
                     case 0:
-                    Console.WriteLine("Creating a Rock");
                         var Rock = new GameRock();
                         Rock.Position = position;
-                        Rock.Velocity = new Vector2(0,18);
+                        Rock.Velocity = new Vector2(0,14);
                         Rocks.Add(Rock);
                         break;
                     case 1:
                         var Gem = new GameGem();
                         Gem.Position = position;
-                        Gem.Velocity = new Vector2(0,-2);
+                        Gem.Velocity = new Vector2(0,14);
                         Gems.Add(Gem);
                         break;
                     default:
@@ -51,6 +51,8 @@ class Main {
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.WHITE);
 
+
+
                 // Draw all of the objects in their current location
                 foreach (var obj in Rocks) {
                     obj.Draw();
@@ -59,6 +61,18 @@ class Main {
                     obj.Draw();
                 }
 
+                var Player= new Player();
+                Player.Position = PlayerPosition;
+                Player.Velocity = new Vector2(2, 0); 
+                Player playerObj = new Player();
+
+                Player.Draw();
+                if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
+                    PlayerPosition.X +=8;
+                }
+                if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
+                    PlayerPosition.X -=8;
+                }
                 Raylib.EndDrawing();
 
                 // Move all of the objects to their next location
@@ -68,11 +82,30 @@ class Main {
                 foreach (var obj in Gems) {
                     obj.MoveVertical();
                 }
+                var TheRectangle = new Rectangle(PlayerPosition.X,PlayerPosition.Y, 20, 20);
+
+                foreach (var obj in Rocks) {
+                    if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
+                        score -=1;
+                        Rocks.Add(obj);
+                        Rocks.Remove(obj);
+                }
+                }
+
+                foreach (var obj in Gems) {
+                    if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
+                        score +=1;
+                        Gems.Add(obj);
+                        Gems.Remove(obj); 
+                }
+                }
+
             }
 
             Raylib.CloseWindow();
         }
     }
+}
 
 
                 // if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
@@ -93,8 +126,3 @@ class Main {
 
                 // Raylib.DrawRectangleRec(TargetRectangle, Color.BLUE);
                 // Raylib.DrawRectangleRec(PlayerRectangle, Color.RED);
-
-                // if (Raylib.CheckCollisionRecs(PlayerRectangle, TargetRectangle)) {
-                //     Raylib.DrawText("You did it!!!!", 12, 34, 20, Color.BLACK);
-                // }
-}
