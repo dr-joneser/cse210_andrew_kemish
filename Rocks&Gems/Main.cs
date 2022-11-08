@@ -1,10 +1,10 @@
 using Raylib_cs;
 using System.Numerics;
 
-class Main {
+class MainRocks {
     static class Program
     {
-        public static void Main()
+        public static void MainRocks()
         {
 
             var ScreenHeight = 480;
