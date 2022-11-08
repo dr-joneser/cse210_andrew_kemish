@@ -36,6 +36,7 @@ class Main {
                      Rock.Velocity = new Vector2(0,14);
                      Rocks.Add(Rock);
                      break;
+                    //  IF case 1 create a GEM
                     case 1:
                         var Gem = new GameGem();
                         Gem.Position = position;
@@ -58,12 +59,13 @@ class Main {
                 foreach (var obj in Gems) {
                     obj.Draw();
                 }
-
+                // Call the player class
                 var Player= new Player();
+                // Assign a position and a velocity to the player
                 Player.Position = PlayerPosition;
                 Player.Velocity = new Vector2(2, 0); 
                 Player playerObj = new Player();
-
+        // THe player will be redrawn in a new position when the keyboard is pressed
                 Player.Draw();
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
                     PlayerPosition.X +=8;
@@ -80,14 +82,14 @@ class Main {
                 foreach (var obj in Gems) {
                     obj.MoveVertical();
                 }
+            // Define the hitbox for the player using a rectangle
                 var TheRectangle = new Rectangle(PlayerPosition.X,PlayerPosition.Y, 20, 20);
-
+            // GO through the Rocks and Gems list and check if they're inside the hitbox
                 foreach (var obj in Rocks) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score -=1;
                 }
                 }
-
                 foreach (var obj in Gems) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score +=1;
