@@ -9,7 +9,7 @@ abstract class Position {
 
 abstract class MovementHorizontal: Position {
     // X-VALUE POSITION OF PLAYER IS CHANGED WHEN LEFT OR RIGHT ARROW KEYS ARE PRESSED
-    static void moveRigh(int MovementSpeed)
+    static void moveRight(int MovementSpeed)
     {
         var PlayerRectangle = new Rectangle(430, 400, 20, 20);
         if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {

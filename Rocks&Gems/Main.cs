@@ -18,7 +18,7 @@ class Main {
             var TargetRectangle = new Rectangle(100, 100, RectangleSize, RectangleSize);
             var MovementSpeed = 4;
 
-            Raylib.InitWindow(ScreenWidth, ScreenHeight, "Greed");
+            Raylib.InitWindow(ScreenWidth, ScreenHeight, "Rocks and Gems");
             Raylib.SetTargetFPS(60);
             int score = 0;
 
