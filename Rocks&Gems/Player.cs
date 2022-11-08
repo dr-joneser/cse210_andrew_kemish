@@ -4,7 +4,7 @@ using System.Numerics;
 class Player: MovementHorizontal{
     override public void Draw(){
     var PlayerRectangle = new Rectangle(430, 400, 20, 20);
-    Raylib.DrawRectangle(400, 450, 20,20, Color.GREEN);
+    Raylib.DrawRectangle((int)Position.X, (int)Position.Y, 20,20, Color.GREEN);
     }
 
 

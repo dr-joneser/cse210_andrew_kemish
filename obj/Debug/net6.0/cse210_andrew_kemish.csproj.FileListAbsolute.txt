@@ -34,3 +34,9 @@ C:/Users/Andrew's Laptop/Documents/GitHub/cse210_andrew_kemish/bin/Debug/net6.0/
 C:/Users/Andrew's Laptop/Documents/GitHub/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.csproj.CopyComplete
 C:/Users/Andrew's Laptop/Documents/GitHub/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.genruntimeconfig.cache
 C:/Users/Andrew's Laptop/Documents/GitHub/cse210_andrew_kemish/obj/Debug/net6.0/ref/cse210_andrew_kemish.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/Raylib-cs.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/runtimes/linux-x64/native/libraylib.so
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/runtimes/osx-x64/native/libraylib.dylib
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/runtimes/win-x64/native/raylib.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/bin/Debug/net6.0/runtimes/win-x86/native/raylib.dll
+/Users/kemish/Documents/GIT/cse210_andrew_kemish/obj/Debug/net6.0/cse210_andrew_kemish.csproj.CopyComplete
