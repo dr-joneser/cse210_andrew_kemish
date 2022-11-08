@@ -3,13 +3,28 @@ using System.Numerics;
 
 
 abstract class MovementHorizontal{
-    public Vector2 Position = new Vector2(0, 0);
-    public Vector2 Velocity {get; set; } = new Vector2(0, 0);
+    public Vector2 Position { get; set; } = new Vector2(0, 0);
+    public Vector2 Velocity { get; set; } = new Vector2(0, 0);
 
     virtual public void Draw(){
         // Base game objects do not have anything to draw
     }
     // X-VALUE POSITION OF PLAYER IS CHANGED WHEN LEFT OR RIGHT ARROW KEYS ARE PRESSED
+    public void MovePlayer()
+    {
+        Vector2 NewPosition = Position;
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
+                    NewPosition.X += 2;
+                    Position = NewPosition;
+                }
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
+                    NewPosition.X -= 2;
+                    Position = NewPosition;
+                }
+        else{
+            Position = NewPosition;
+        }
+    }
 }
 
 abstract class MovementVertical{
