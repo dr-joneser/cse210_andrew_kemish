@@ -1,5 +1,0 @@
-class RocksandGems: MovementVertical {
-    
-
-    
-}

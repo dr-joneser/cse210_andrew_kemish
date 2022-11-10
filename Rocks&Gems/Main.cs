@@ -1,17 +1,17 @@
 using Raylib_cs;
 using System.Numerics;
 
-class Main {
+class Main: Constant {
     static class Program
     {
         public static void Main()
         {
-
-            var ScreenHeight = 480;
-            var ScreenWidth = 800;
-            var Rocks = new List<GameRock>();
-            var Gems = new List<GameGem>();
-            var Random = new Random();
+            //Accessing variables through the constant class
+            //var ScreenHeight = 480;
+            //var ScreenWidth = 800;
+            //var Rocks = new List<GameRock>();
+            //var Gems = new List<GameGem>();
+            //var Random = new Random();
 
             Raylib.InitWindow(ScreenWidth, ScreenHeight, "Greed");
             Raylib.SetTargetFPS(10);
@@ -84,7 +84,7 @@ class Main {
                 }
             // Define the hitbox for the player using a rectangle
                 var TheRectangle = new Rectangle(PlayerPosition.X,PlayerPosition.Y, 20, 20);
-            // GO through the Rocks and Gems list and check if they're inside the hitbox
+            // Go through the Rocks and Gems list and check if they're inside the hitbox
                 foreach (var obj in Rocks) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score -=1;
@@ -104,26 +104,4 @@ class Main {
 }
 
 
-                // if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
-                //     PlayerRectangle.x += MovementSpeed;
-                // }
-
-                // if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
-                //     PlayerRectangle.x -= MovementSpeed;
-                // }
-
-                // if (Raylib.IsKeyDown(KeyboardKey.KEY_UP)) {
-                //     PlayerRectangle.y -= MovementSpeed;
-                // }
-
-                // if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN)) {
-                //     PlayerRectangle.y += MovementSpeed;
-                // }
-
-                // Raylib.DrawRectangleRec(TargetRectangle, Color.BLUE);
-                // Raylib.DrawRectangleRec(PlayerRectangle, Color.RED);
-
-                // if (Raylib.CheckCollisionRecs(PlayerRectangle, TargetRectangle)) {
-                //     Raylib.DrawText("You did it!!!!", 12, 34, 20, Color.BLACK);
-                // }
-
+            
