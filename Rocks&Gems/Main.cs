@@ -65,7 +65,7 @@ class Main: Constant {
                 Player.Position = PlayerPosition;
                 Player.Velocity = new Vector2(2, 0); 
                 Player playerObj = new Player();
-        // THe player will be redrawn in a new position when the keyboard is pressed
+        // The player will be redrawn in a new position when the keyboard is pressed
                 Player.Draw();
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
                     PlayerPosition.X +=8;
@@ -88,12 +88,16 @@ class Main: Constant {
                 foreach (var obj in Rocks) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score -=1;
-                }
+                    //Remove object from list if collision occurs
+                    Rocks.Remove(obj);
+                    }
                 }
                 foreach (var obj in Gems) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score +=1;
-                }
+                    //Remove object from list if collision occurs
+                    Gems.Remove(obj);
+                    }
                 }
 
             }
