@@ -1,20 +1,20 @@
 using Raylib_cs;
 using System.Numerics;
 
-class Main: Constant {
+class Main {
     static class Program
     {
         public static void Main()
         {
-            //Accessing variables through the constant class
-            //var ScreenHeight = 480;
-            //var ScreenWidth = 800;
-            //var Rocks = new List<GameRock>();
-            //var Gems = new List<GameGem>();
-            //var Random = new Random();
+            // Accessing variables through the constant class
+            var ScreenHeight = 480;
+            var ScreenWidth = 800;
+            var Rocks = new List<GameRock>();
+            var Gems = new List<GameGem>();
+            var Random = new Random();
 
             Raylib.InitWindow(ScreenWidth, ScreenHeight, "Greed");
-            Raylib.SetTargetFPS(10);
+            Raylib.SetTargetFPS(60);
             int score = 0;
             var PlayerPosition = new Vector2 (400,450);
 
@@ -33,14 +33,14 @@ class Main: Constant {
                     case 0:
                      var Rock = new GameRock();
                      Rock.Position = position;
-                     Rock.Velocity = new Vector2(0,14);
+                     Rock.Velocity = new Vector2(0,4);
                      Rocks.Add(Rock);
                      break;
                     //  IF case 1 create a GEM
                     case 1:
                         var Gem = new GameGem();
                         Gem.Position = position;
-                        Gem.Velocity = new Vector2(0,14);
+                        Gem.Velocity = new Vector2(0,4);
                         Gems.Add(Gem);
                         break;
                     default:
@@ -68,10 +68,10 @@ class Main: Constant {
         // The player will be redrawn in a new position when the keyboard is pressed
                 Player.Draw();
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
-                    PlayerPosition.X +=8;
+                    PlayerPosition.X +=2;
                 }
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
-                    PlayerPosition.X -=8;
+                    PlayerPosition.X -=2;
                 }
                 Raylib.EndDrawing();
 
