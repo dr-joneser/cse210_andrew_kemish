@@ -88,15 +88,15 @@ class Main {
                 foreach (var obj in Rocks) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score -=1;
-                    //Remove object from list if collision occurs
-                    Rocks.Remove(obj);
+                    //Remove object from list if collision occurs(Doesn't work when running through the foreach loop)
+                    // Rocks.Remove(obj);
                     }
                 }
                 foreach (var obj in Gems) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score +=1;
-                    //Remove object from list if collision occurs
-                    Gems.Remove(obj);
+                    //Remove object from list if collision occurs(Doesn't work when running through the foreach loop)
+                    // Gems.Remove(obj);
                     }
                 }
 
