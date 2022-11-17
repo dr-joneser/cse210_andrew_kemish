@@ -21,7 +21,7 @@ namespace Unit05.Game.Casting
         public Snake(Color color, Vector2 StartingPosition)
         {
             this.color = color;
-            PrepareBody();
+            PrepareBody(StartingPosition);
         }
 
         /// <summary>
