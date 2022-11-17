@@ -22,7 +22,7 @@ namespace Unit05
             cast.AddActor("food", new Food());
             cast.AddActor("snake", new Snake());
             cast.AddActor("score", new Score());
-            cast.AddActor("snake 2", new Snake());
+            cast.AddActor("PlayerTwo", new Snake());
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
