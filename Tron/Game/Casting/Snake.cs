@@ -102,7 +102,7 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Prepares the snake body for moving.
         /// </summary>
-        private void PrepareBody(Vecotr2 StartingPosition)
+        private void PrepareBody(Vector2 StartingPosition)
         {
             int x = (int)StartingPosition.X;
             int y = (int)StartingPosition.Y;
