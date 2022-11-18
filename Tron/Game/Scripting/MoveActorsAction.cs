@@ -33,7 +33,7 @@ namespace Unit05.Game.Scripting
         var actors = cast.GetAllActors();
         foreach (var actor in actors) {
             actor.MoveNext();
-        }
+        } 
     }
     }
 }

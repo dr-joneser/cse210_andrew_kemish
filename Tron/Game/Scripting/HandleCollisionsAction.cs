@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using Unit05.Game.Casting;
 using Unit05.Game.Services;
+using Raylib_cs;
 
 
 namespace Unit05.Game.Scripting
@@ -30,11 +31,28 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == false)
             {
-                HandleFoodCollisions(cast);
+                //HandleFoodCollisions(cast);
                 HandleSegmentCollisions(cast);
                 HandleGameOver(cast);
+                LeaveTail(cast);
             }
         }
+
+            // Call the GrowTail() function from snake based on an interval of time using raylib.GetTime()
+        private void LeaveTail (Cast cast) {
+            // Getting time since game window is opened in seconds and converting to float.
+            float timePast = (float)Raylib.GetTime();
+            // get snake and player2 from the cast and set the interval to grow
+            Snake snake = (Snake)cast.GetFirstActor("snake");
+            Snake snake2 = (Snake)cast.GetFirstActor("PlayerTwo");
+            int interval = 1;
+            // When the rounded timePast is divisible by 2 then call the GrowTail() function
+                if (Math.Round(timePast) % 2 == 0) {
+                    snake2.GrowTail(interval);
+                    snake.GrowTail(interval);
+                }
+            }
+        
 
         /// <summary>
         /// Updates the score nd moves the food if the snake collides with it.
@@ -64,8 +82,36 @@ namespace Unit05.Game.Scripting
             Snake snake = (Snake)cast.GetFirstActor("snake");
             Actor head = snake.GetHead();
             List<Actor> body = snake.GetBody();
+            Snake snake2 = (Snake)cast.GetFirstActor("PlayerTwo");
+            Actor head2 = snake2.GetHead();
+            List<Actor> body2 = snake2.GetBody();
 
+            // Check for collisions within the first snake and its head
             foreach (Actor segment in body)
+            {
+                if (segment.GetPosition().Equals(head.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+            }
+            // Check for collisions within snake2 and its head
+            foreach (Actor segment in body2)
+            {
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+            }
+            // Check for collisions between snake1 body and snake 2 head
+            foreach (Actor segment in body)
+            {
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    isGameOver = true;
+                }
+            }
+            // Check for collisions between snake2 body and snake 1 head
+            foreach (Actor segment in body2)
             {
                 if (segment.GetPosition().Equals(head.GetPosition()))
                 {
@@ -79,7 +125,9 @@ namespace Unit05.Game.Scripting
             if (isGameOver == true)
             {
                 Snake snake = (Snake)cast.GetFirstActor("snake");
+                Snake snake2 = (Snake)cast.GetFirstActor("PlayerTwo");
                 List<Actor> segments = snake.GetSegments();
+                List<Actor> segments2 = snake2.GetSegments();
                 Food food = (Food)cast.GetFirstActor("food");
 
                 // create a "game over" message
@@ -92,8 +140,13 @@ namespace Unit05.Game.Scripting
                 message.SetPosition(position);
                 cast.AddActor("messages", message);
 
-                // make everything white
+                // make everything white in snake 1
                 foreach (Actor segment in segments)
+                {
+                    segment.SetColor(Constants.WHITE);
+                }
+                // make everything white in snake 2
+                foreach (Actor segment in segments2)
                 {
                     segment.SetColor(Constants.WHITE);
                 }
