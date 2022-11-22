@@ -1,7 +1,7 @@
 using Raylib_cs;
 using System.Numerics;
 
-class Main {
+class Main: Constant {
     static class Program
     {
         public static void Main()
@@ -14,7 +14,7 @@ class Main {
             var Random = new Random();
 
             Raylib.InitWindow(ScreenWidth, ScreenHeight, "Greed");
-            Raylib.SetTargetFPS(60);
+            Raylib.SetTargetFPS(20);
             int score = 0;
             var PlayerPosition = new Vector2 (400,450);
 
@@ -33,14 +33,14 @@ class Main {
                     case 0:
                      var Rock = new GameRock();
                      Rock.Position = position;
-                     Rock.Velocity = new Vector2(0,4);
+                     Rock.Velocity = new Vector2(0,8);
                      Rocks.Add(Rock);
                      break;
                     //  IF case 1 create a GEM
                     case 1:
                         var Gem = new GameGem();
                         Gem.Position = position;
-                        Gem.Velocity = new Vector2(0,4);
+                        Gem.Velocity = new Vector2(0,8);
                         Gems.Add(Gem);
                         break;
                     default:
@@ -68,10 +68,10 @@ class Main {
         // The player will be redrawn in a new position when the keyboard is pressed
                 Player.Draw();
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
-                    PlayerPosition.X +=2;
+                    PlayerPosition.X +=6;
                 }
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
-                    PlayerPosition.X -=2;
+                    PlayerPosition.X -=6;
                 }
                 Raylib.EndDrawing();
 
@@ -85,18 +85,19 @@ class Main {
             // Define the hitbox for the player using a rectangle
                 var TheRectangle = new Rectangle(PlayerPosition.X,PlayerPosition.Y, 20, 20);
             // Go through the Rocks and Gems list and check if they're inside the hitbox
-                foreach (var obj in Rocks) {
+                foreach (var obj in Rocks.ToList()) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score -=1;
                     //Remove object from list if collision occurs(Doesn't work when running through the foreach loop)
-                    // Rocks.Remove(obj);
+                    Rocks.Remove(obj);
                     }
                 }
-                foreach (var obj in Gems) {
+
+                foreach (var obj in Gems.ToList()) {
                     if (Raylib.CheckCollisionPointRec(obj.Position, TheRectangle)) {
                         score +=1;
                     //Remove object from list if collision occurs(Doesn't work when running through the foreach loop)
-                    // Gems.Remove(obj);
+                    Gems.Remove(obj);
                     }
                 }
 
