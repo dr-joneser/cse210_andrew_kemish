@@ -1,0 +1,37 @@
+using Raylib_cs;
+using System.Numerics;
+
+class Main{
+    static class Program
+    {
+        public static void Main()
+        {
+            // Accessing variables through the constant class
+            var ScreenHeight = 480;
+            var ScreenWidth = 800;
+            var LevelOnelist = new List<LevelOnePlatforms>();
+            var LevelTwoList = new List<LevelTwoPlatforms>();
+            var Random = new Random();
+            int level = 1;
+
+            Raylib.InitWindow(ScreenWidth, ScreenHeight, "Jumper");
+            Raylib.SetTargetFPS(60);
+            
+            while (GameOver == false){
+                if (level == 1){
+                    // Draw level one platforms
+                    foreach()
+                     var PlatformsOne = new LevelOnePlatforms();
+                     PlatformsOne.Add(LevelOnelist);
+                }
+
+                if (level == 2 ){
+                    // Draw level two platforms
+                }
+            }
+        }
+    }
+}
+class Main(){
+        int level = 1;
+}
