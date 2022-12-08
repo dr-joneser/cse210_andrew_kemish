@@ -1,20 +1,39 @@
 using Raylib_cs;
 using System.Numerics;
 
-class DrawPlatform{
-    virtual public void Draw() {
+
+public class LevelOneTopPlatforms: Drawing {
+    public List<Rectangle> TopHalfList = new List<Rectangle>();
+    public void CreateTopList(){
+        int PlatformHeight = 5;
+        int PlatformLength = 100;
+       Rectangle one = new   Rectangle(175,100,PlatformLength, PlatformHeight);
+       Rectangle two = new   Rectangle(300,275,PlatformLength, PlatformHeight); 
+       Rectangle three = new Rectangle(50,450,PlatformLength, PlatformHeight); 
+       Rectangle four = new  Rectangle(350,550,PlatformLength, PlatformHeight); 
+       Rectangle five = new  Rectangle(180,700,PlatformLength, PlatformHeight); 
+       TopHalfList.Add(one);
+       TopHalfList.Add(two);
+       TopHalfList.Add(three);
+       TopHalfList.Add(four);
+       TopHalfList.Add(five);
     }
 }
 
-class LevelOnePlatforms: DrawPlatform{
-    override public void Draw() {
-        Raylib.DrawRectangle(10, 10, 5,100, Color.GREEN);
-        Raylib.DrawRectangle(10, 10, 5,100, Color.GREEN);
+public class LevelOneBottomPlatforms: LevelOneTopPlatforms{
+    public List<Rectangle>  BottomHalfList = new List<Rectangle>();
+    public void CreateBottomList(){
+        foreach (var obj in TopHalfList){
+            Rectangle BottomHalf = new Rectangle((int)obj.x,(int)obj.y+5,(int)obj.width,(int)obj.height);
+            BottomHalfList.Add(BottomHalf);
+        }
     }
 }
-class LevelTwoPlatforms: DrawPlatform{
-        override public void Draw() {
-            Raylib.DrawRectangle(10, 10, 5,100, Color.GREEN);
-            Raylib.DrawRectangle(10, 10, 5,100, Color.GREEN);
-        }
-}
+// class LevelTwoPlatforms: DrawPlatform{
+//         override public void Draw() {
+//             Raylib.DrawRectangle(10, 75, 5,100, Color.GREEN);
+//             Raylib.DrawRectangle(10, 10, 5,100, Color.GREEN);
+//         }
+// }
+
+
