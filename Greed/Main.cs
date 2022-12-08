@@ -1,7 +1,7 @@
 using Raylib_cs;
 using System.Numerics;
 
-class Main: Constant {
+class Main {
     static class Program
     {
         public static void Main()

@@ -1,8 +1,13 @@
 using Raylib_cs;
 using System.Numerics;
 
+abstract class Drawing{
+    virtual public void Draw(){
 
-public class LevelOneTopPlatforms: Drawing {
+    }
+}
+
+public class LevelOneTopPlatforms {
     public List<Rectangle> TopHalfList = new List<Rectangle>();
     public void CreateTopList(){
         int PlatformHeight = 5;
@@ -18,6 +23,11 @@ public class LevelOneTopPlatforms: Drawing {
        TopHalfList.Add(four);
        TopHalfList.Add(five);
     }
+    // override public void Draw() {
+    //     foreach( var obj in TopHalfList){
+    //         Raylib.DrawRectangle((int)obj.x,(int)obj.y+5,(int)obj.width,(int)obj.height);
+    //     }
+    // }
 }
 
 public class LevelOneBottomPlatforms: LevelOneTopPlatforms{
@@ -28,7 +38,12 @@ public class LevelOneBottomPlatforms: LevelOneTopPlatforms{
             BottomHalfList.Add(BottomHalf);
         }
     }
-}
+    // override public void Draw() {
+    //     foreach( var obj in TopHalfList){
+    //         Raylib.DrawRectangle((int)obj.x,(int)obj.y+5,(int)obj.width,(int)obj.height);
+    //     }
+    }
+
 // class LevelTwoPlatforms: DrawPlatform{
 //         override public void Draw() {
 //             Raylib.DrawRectangle(10, 75, 5,100, Color.GREEN);

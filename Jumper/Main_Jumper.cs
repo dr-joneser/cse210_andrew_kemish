@@ -36,8 +36,8 @@ namespace HelloWorld
                 // Draw level one platforms
                 if (level == 1){
                     foreach(var obj in LevelOnelist ){
-                        obj.Draw();
-                        // Raylib.DrawRectangle((int)obj.x,(int)obj.y,(int)obj.width,(int)obj.height,Color.GREEN);
+                        // obj.Draw();
+                        Raylib.DrawRectangle((int)obj.x,(int)obj.y,(int)obj.width,(int)obj.height,Color.GREEN);
                     }
                 }
 
