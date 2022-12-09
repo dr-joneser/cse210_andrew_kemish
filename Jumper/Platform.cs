@@ -16,7 +16,7 @@ public class LevelOneTopPlatforms {
        Rectangle two = new   Rectangle(300,275,PlatformLength, PlatformHeight); 
        Rectangle three = new Rectangle(50,450,PlatformLength, PlatformHeight); 
        Rectangle four = new  Rectangle(350,550,PlatformLength, PlatformHeight); 
-       Rectangle five = new  Rectangle(180,700,PlatformLength, PlatformHeight); 
+       Rectangle five = new  Rectangle(180,714,PlatformLength, PlatformHeight); 
        TopHalfList.Add(one);
        TopHalfList.Add(two);
        TopHalfList.Add(three);

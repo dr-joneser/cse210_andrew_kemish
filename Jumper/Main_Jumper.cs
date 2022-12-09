@@ -15,41 +15,71 @@ namespace HelloWorld
             int level = 1;
             bool GameOver = false;
 
-            // Platform List for level one and two
-            var LevelOnelist = new List<Rectangle>();
+            // Platform List for levels one and two
+            var LevelOneList = new List<Rectangle>();
             var LevelTwoList = new List<Rectangle>();
             
             // Add platforms to the list. Platforms will have a top and a bottom half
             var TopHalves = new LevelOneTopPlatforms();
             TopHalves.CreateTopList();
             foreach (var obj in TopHalves.TopHalfList){
-                LevelOnelist.Add(obj);
+                LevelOneList.Add(obj);
             }
             var BottomHalves = new LevelOneBottomPlatforms();
             BottomHalves.CreateBottomList();
             foreach (var obj in BottomHalves.BottomHalfList){
-                LevelOnelist.Add(obj);
+                LevelOneList.Add(obj);
             }
+            // Define the Players Starting position
+            var PlayerPosition = new Vector2(240,700);
+            bool OnPlatform = true;
             // Game execution
             while (!Raylib.WindowShouldClose())
             {
-                // Draw level one platforms
-                if (level == 1){
-                    foreach(var obj in LevelOnelist ){
+                // Draw all items in the level one list using a foreach loop
+                if (level == 1)
+                {
+                    foreach(var obj in LevelOneList ){
                         // obj.Draw();
                         Raylib.DrawRectangle((int)obj.x,(int)obj.y,(int)obj.width,(int)obj.height,Color.GREEN);
                     }
                 }
 
+                // Create the player
+                var player = new MovePlayer();
+                player.Position = PlayerPosition;
+                // gravity.Gravity(OnPlatform,(int)PlayerPosition.X);
+                var PlayerRectangle = new Rectangle((int)PlayerPosition.X,(int)PlayerPosition.Y, 15,15);
+                player.Draw();
+                Vector2 gravity = player.Gravity(OnPlatform, (int)PlayerPosition.X);
+                PlayerPosition = gravity;
+                // Move the player left-right
+                if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
+                    PlayerPosition.X +=4;
+                }
+                if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)) {
+                    PlayerPosition.X -=4;
+                }
 
 
+                // Check to see if the player is on a platform
+                foreach (var obj in LevelOneList) {
+                    if (Raylib.CheckCollisionRecs(obj, PlayerRectangle ))
+                    {
+                        OnPlatform = true;
+                    }
+                    else
+                    {
+                        OnPlatform = false;
+                    }
+                    }
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.WHITE);
                 Raylib.EndDrawing();
-            }
-
-            Raylib.CloseWindow();
+        }
+        Raylib.CloseWindow();
         }
     }
 }
+
 
