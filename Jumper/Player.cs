@@ -1,33 +1,33 @@
 using Raylib_cs;
 using System.Numerics;
 
-class Player{
-    public Vector2 Position {get; set; } = new Vector2(0, 0);
+class Player: MovePlayer{
     public void Draw(){
         var PlayerRectangle = new Rectangle(430, 400, 20, 20);
         Raylib.DrawRectangle((int)Position.X, (int)Position.Y, 15,15, Color.BLUE);
     }
 }
 
-class MovePlayer: Player{
+class MovePlayer{
     
-    public Vector2 Gravity(bool OnPlatform, int playerX){
+    public Vector2 Position {get; set; } = new Vector2(0, 0);
+    public Vector2 Gravity(bool OnPlatform, Vector2 PlayerPosition){
     var player = new Player();
-    Vector2 possition = player.Position;
+    Vector2 possition = PlayerPosition;
         if (OnPlatform == true)
         {
-            int i = 0;
+            // int i = 0;
             Vector2 Landing = possition;
-            Landing.X = playerX;
-            Landing.Y += i;
+            Landing.X = possition.X;
+            Landing.Y += 0;
             possition = Landing;
         }
         else
         {
-            int z = 3;
+            // int z = 3;
             Vector2 Falling = possition;
-            Falling.X = playerX;
-            Falling.Y += z;
+            Falling.X = possition.X;
+            Falling.Y += -3;
             possition = Falling;
         }
         return possition;

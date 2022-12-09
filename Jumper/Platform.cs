@@ -12,7 +12,7 @@ public class LevelOneTopPlatforms {
     public void CreateTopList(){
         int PlatformHeight = 5;
         int PlatformLength = 100;
-       Rectangle one = new   Rectangle(175,100,PlatformLength, PlatformHeight);
+       Rectangle one = new   Rectangle(175,5,PlatformLength, PlatformHeight);
        Rectangle two = new   Rectangle(300,275,PlatformLength, PlatformHeight); 
        Rectangle three = new Rectangle(50,450,PlatformLength, PlatformHeight); 
        Rectangle four = new  Rectangle(350,550,PlatformLength, PlatformHeight); 

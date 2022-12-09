@@ -33,6 +33,7 @@ namespace HelloWorld
             // Define the Players Starting position
             var PlayerPosition = new Vector2(240,700);
             bool OnPlatform = true;
+            Vector2 Velocity = new Vector2(0,0);
             // Game execution
             while (!Raylib.WindowShouldClose())
             {
@@ -46,13 +47,10 @@ namespace HelloWorld
                 }
 
                 // Create the player
-                var player = new MovePlayer();
+                var player = new Player();
                 player.Position = PlayerPosition;
-                // gravity.Gravity(OnPlatform,(int)PlayerPosition.X);
                 var PlayerRectangle = new Rectangle((int)PlayerPosition.X,(int)PlayerPosition.Y, 15,15);
                 player.Draw();
-                Vector2 gravity = player.Gravity(OnPlatform, (int)PlayerPosition.X);
-                PlayerPosition = gravity;
                 // Move the player left-right
                 if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)) {
                     PlayerPosition.X +=4;
@@ -64,7 +62,7 @@ namespace HelloWorld
 
                 // Check to see if the player is on a platform
                 foreach (var obj in LevelOneList) {
-                    if (Raylib.CheckCollisionRecs(obj, PlayerRectangle ))
+                    if (Raylib.CheckCollisionRecs(obj, PlayerRectangle))
                     {
                         OnPlatform = true;
                     }
@@ -73,6 +71,8 @@ namespace HelloWorld
                         OnPlatform = false;
                     }
                     }
+                Vector2 gravity = player.Gravity(OnPlatform, PlayerPosition);
+                PlayerPosition = gravity;
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.WHITE);
                 Raylib.EndDrawing();
