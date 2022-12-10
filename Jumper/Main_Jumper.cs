@@ -25,6 +25,7 @@ namespace HelloWorld
             foreach (var obj in TopHalves.TopHalfList){
                 LevelOneList.Add(obj);
             }
+            
             var BottomHalves = new LevelOneBottomPlatforms();
             BottomHalves.CreateBottomList();
             foreach (var obj in BottomHalves.BottomHalfList){
@@ -65,6 +66,7 @@ namespace HelloWorld
                     if (Raylib.CheckCollisionRecs(obj, PlayerRectangle))
                     {
                         OnPlatform = true;
+                        break;
                     }
                     else
                     {

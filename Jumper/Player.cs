@@ -16,18 +16,24 @@ class MovePlayer{
     Vector2 possition = PlayerPosition;
         if (OnPlatform == true)
         {
-            // int i = 0;
             Vector2 Landing = possition;
             Landing.X = possition.X;
             Landing.Y += 0;
             possition = Landing;
         }
-        else
+        if(TouchBottom == true)
         {
-            // int z = 3;
             Vector2 Falling = possition;
             Falling.X = possition.X;
-            Falling.Y += -3;
+            Falling.Y += -1;
+            possition = Falling;
+        }
+
+        else
+        {
+            Vector2 Falling = possition;
+            Falling.X = possition.X;
+            Falling.Y += -1;
             possition = Falling;
         }
         return possition;
@@ -35,10 +41,12 @@ class MovePlayer{
 }
 
 
-// Player's position is modified by 
-// 1. Gravity - Causing it to fall down
-// Activated by being airborne or touching bottom of platform
-// 2. Jump - Causing him to rise
+
+
+// Player can move in 3 directions
+// 1. Down - Caused by Gravity
+// Activated by being airborne or touching the bottom of a platform
+// 2. Up - Player presses up key and they jump
 // After a while they stop jumping
-// 3. Platform - Causing them to stick
+// 3. Stationary - Cause by landing on a platform
 // They stay there indefinitely
